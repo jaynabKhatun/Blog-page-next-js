@@ -28,11 +28,22 @@ const Navbar = () => {
       name: "Blogs",
       path: "/blogs",
     },
+    {
+      name: "category",
+      path: "/category",
+    },
   ];
 
   const handleLogin = () => {
     router.push("/about");
   };
+
+  if (pathName.includes("dashboard"))
+    return (
+      <div className="bg-green-500 p-6">
+        <h1>Dashboard</h1>
+      </div>
+    );
 
   return (
     <nav className="bg-slate-600 p-6 flex justify-between items-center">
